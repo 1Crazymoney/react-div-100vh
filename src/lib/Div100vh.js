@@ -24,8 +24,8 @@ export default class Div100vh extends React.Component {
   }
 
   render() {
-    const { as: Element = 'div', ...props } = this.props;
+    const { as: Element = 'div', childRef, ...props } = this.props;
 
-    return <Element {...props} style={this.state.style} />;
+    return <Element {...props} ref={childRef} style={this.state.style} />;
   }
 }
